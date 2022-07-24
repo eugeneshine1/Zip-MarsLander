@@ -66,9 +66,18 @@ public class Simulation {
             }
         }
         printString(vehicle.checkFinalStatus());
-        if (status != null) {
-            return status.getStatus();
+        if (vehicle.checkFinalStatus().equals(vehicle.dead)) {
+            return -3;
+        } else if (vehicle.checkFinalStatus().equals(vehicle.crashed)) {
+            return -2;
+        } else if (vehicle.checkFinalStatus().equals(vehicle.emptyfuel)) {
+            return -1;
+        } else if (vehicle.checkFinalStatus().equals(vehicle.success)) {
+            return -0;
         }
+//        if (status != null) {
+//            return status.getStatus();
+//        }
         return -1;
     }
 
