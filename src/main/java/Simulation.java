@@ -73,7 +73,7 @@ public class Simulation {
         } else if (vehicle.checkFinalStatus().equals(vehicle.emptyfuel)) {
             return -1;
         } else if (vehicle.checkFinalStatus().equals(vehicle.success)) {
-            return -0;
+            return 0;
         }
 //        if (status != null) {
 //            return status.getStatus();
